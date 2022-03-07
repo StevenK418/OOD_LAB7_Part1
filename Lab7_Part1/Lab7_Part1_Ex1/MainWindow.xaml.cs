@@ -20,9 +20,26 @@ namespace Lab7_Part1_Ex1
     /// </summary>
     public partial class MainWindow : Window
     {
+        private NORTHWNDEntities db = new NORTHWNDEntities();
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Ex1Button_Click(object sender, RoutedEventArgs e)
+        {
+            var query = from c in db.Categories
+                join p in db.Products on c.CategoryName equals p.Category.CategoryName
+                orderby c.CategoryName
+                select new 
+                {
+                    Category = c.CategoryName,
+                    Product = p.ProductName
+                };
+
+            Ex1lbDisplay.ItemsSource = query.ToList();
+            Ex1TblkCount.Text = query.ToList().Count.ToString();
+
         }
     }
 }
