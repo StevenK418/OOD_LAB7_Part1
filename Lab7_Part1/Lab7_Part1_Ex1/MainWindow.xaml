@@ -7,7 +7,28 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <TabControl>
+            <TabItem Header="Ex1" Width="75">
+                <Grid>
+                    <Grid.RowDefinitions>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="8*"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex1Button"/>
+                    <ListBox Grid.Row="1" Name="Ex1lbDisplay"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Ex2" Width="75">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="8*"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex2Button"/>
+                    <ListBox Grid.Row="1" Name="Ex2lbDisplay"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
         
     </Grid>
 </Window>
