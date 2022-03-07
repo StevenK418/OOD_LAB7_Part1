@@ -11,8 +11,8 @@
             <TabItem Header="Ex1" Width="75">
                 <Grid>
                     <Grid.RowDefinitions>
-                            <RowDefinition Height="2*"/>
-                            <RowDefinition Height="8*"/>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="8*"/>
                     </Grid.RowDefinitions>
                     <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex1Button"/>
                     <ListBox Grid.Row="1" Name="Ex1lbDisplay"/>
