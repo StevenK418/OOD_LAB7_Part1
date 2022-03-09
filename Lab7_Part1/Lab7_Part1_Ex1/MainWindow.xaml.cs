@@ -137,15 +137,14 @@ namespace Lab7_Part1_Ex1
 
         private void Ex7Button_Click(object sender, RoutedEventArgs e)
         {
-            //Query the db for all customers with less than 3 orders
-            var query = from customer in db.Customers
-                where customer.Orders.Count < 3
+            //Query the db for all products and group ordered by category
+            var query = from p in db.Products
+                group p by p.Category.CategoryName into g
+                orderby  g.Count() descending
                 select new
                 {
-                    Company = customer.CompanyName,
-                    City = customer.City,
-                    Region = customer.Region,
-                    OrderCount = customer.Orders.Count
+                    Category = g.Key,
+                    Count = g.Count()
                 };
             //Assign the result set as data source for the Datagrid
             Ex7lbDisplay.ItemsSource = query.ToList();
