@@ -27,9 +27,29 @@
                         <RowDefinition Height="7*"/>
                         <RowDefinition Height="2*"/>
                     </Grid.RowDefinitions>
-                    <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex2Button" Grid.Column="1" Margin="308.967,24,343,24" Click="Ex2Button_Click"/>
+                    <Button Grid.Row="0" Content="Get Data" Name="Ex2Button" Margin="326,22,351,17" Click="Ex2Button_Click"/>
                     <ListBox Grid.Row="1" Name="Ex2lbDisplay"/>
                     <TextBlock Name="Ex2TblkCount" Grid.ColumnSpan="2" Grid.Row="2"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Ex3" Width="75">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="8*"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0" Content="Get Data" Name="Ex3Button" Margin="326,20,356,24" Click="Ex3Button_Click"/>
+                    <TextBlock Name="Ex3TblkDetails" Grid.ColumnSpan="2" Grid.Row="1"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Ex4" Width="75">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="8*"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0" Content="Get Data" Name="Ex4Button" Margin="326,20,356,24" Click="Ex4Button_Click"/>
+                    <TextBlock Name="Ex4TblkDetails" Grid.ColumnSpan="2" Grid.Row="1"/>
                 </Grid>
             </TabItem>
         </TabControl>

@@ -18,6 +18,5 @@ C:\Users\User\My Drive\Computer Science Studies\Year2\Subjects\Semester2\ObjectO
 C:\Users\User\My Drive\Computer Science Studies\Year2\Subjects\Semester2\ObjectOrientedDevelopment\Labs\Lab7\Lab7_Part1\Lab7_Part1\Lab7_Part1_Ex1\obj\Debug\Lab7_Part1_Ex1.Properties.Resources.resources
 C:\Users\User\My Drive\Computer Science Studies\Year2\Subjects\Semester2\ObjectOrientedDevelopment\Labs\Lab7\Lab7_Part1\Lab7_Part1\Lab7_Part1_Ex1\obj\Debug\Lab7_Part1_Ex1.csproj.GenerateResource.cache
 C:\Users\User\My Drive\Computer Science Studies\Year2\Subjects\Semester2\ObjectOrientedDevelopment\Labs\Lab7\Lab7_Part1\Lab7_Part1\Lab7_Part1_Ex1\obj\Debug\Lab7_Part1_Ex1.csproj.CoreCompileInputs.cache
-C:\Users\User\My Drive\Computer Science Studies\Year2\Subjects\Semester2\ObjectOrientedDevelopment\Labs\Lab7\Lab7_Part1\Lab7_Part1\Lab7_Part1_Ex1\obj\Debug\Lab7_Part1_Ex1.csproj.CopyComplete
 C:\Users\User\My Drive\Computer Science Studies\Year2\Subjects\Semester2\ObjectOrientedDevelopment\Labs\Lab7\Lab7_Part1\Lab7_Part1\Lab7_Part1_Ex1\obj\Debug\Lab7_Part1_Ex1.exe
 C:\Users\User\My Drive\Computer Science Studies\Year2\Subjects\Semester2\ObjectOrientedDevelopment\Labs\Lab7\Lab7_Part1\Lab7_Part1\Lab7_Part1_Ex1\obj\Debug\Lab7_Part1_Ex1.pdb
