@@ -134,7 +134,6 @@ namespace Lab7_Part1_Ex1
                 Ex6TblkDetails.Text = string.Format("Total for supplier {0}\n\n{1:c}", company, query);
             }
         }
-
         private void Ex7Button_Click(object sender, RoutedEventArgs e)
         {
             //Query the db for all products and group ordered by category
