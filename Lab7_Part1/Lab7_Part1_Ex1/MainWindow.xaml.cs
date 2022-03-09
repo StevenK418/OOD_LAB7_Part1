@@ -134,5 +134,21 @@ namespace Lab7_Part1_Ex1
                 Ex6TblkDetails.Text = string.Format("Total for supplier {0}\n\n{1:c}", company, query);
             }
         }
+
+        private void Ex7Button_Click(object sender, RoutedEventArgs e)
+        {
+            //Query the db for all customers with less than 3 orders
+            var query = from customer in db.Customers
+                where customer.Orders.Count < 3
+                select new
+                {
+                    Company = customer.CompanyName,
+                    City = customer.City,
+                    Region = customer.Region,
+                    OrderCount = customer.Orders.Count
+                };
+            //Assign the result set as data source for the Datagrid
+            Ex7lbDisplay.ItemsSource = query.ToList();
+        }
     }
 }

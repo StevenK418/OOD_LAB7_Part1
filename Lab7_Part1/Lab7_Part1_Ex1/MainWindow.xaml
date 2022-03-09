@@ -77,6 +77,16 @@
                     <TextBlock Name="Ex6TblkDetails" Margin="10" Grid.Column="1"  Grid.Row="1"/>
                 </Grid>
             </TabItem>
+            <TabItem Header="Ex7" Width="75">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="8*"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0" Content="Get Data" Name="Ex7Button" Margin="326,20,356,24" Click="Ex7Button_Click"/>
+                    <DataGrid Grid.Row="1" Name="Ex7lbDisplay"/>
+                </Grid>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>
