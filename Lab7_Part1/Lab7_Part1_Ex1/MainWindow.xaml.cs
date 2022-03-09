@@ -39,7 +39,23 @@ namespace Lab7_Part1_Ex1
 
             Ex1lbDisplay.ItemsSource = query.ToList();
             Ex1TblkCount.Text = query.ToList().Count.ToString();
+        }
 
+        private void Ex2Button_Click(object sender, RoutedEventArgs e)
+        {
+            var query = from p in db.Products
+                orderby p.Category.CategoryName, p.ProductName
+                select new
+                {
+                    Category = p.Category.CategoryName,
+                    Product = p.ProductName
+                };
+
+            var results = query.ToList();
+
+            Ex2lbDisplay.ItemsSource = results;
+
+            Ex2TblkCount.Text = results.Count.ToString();
         }
     }
 }

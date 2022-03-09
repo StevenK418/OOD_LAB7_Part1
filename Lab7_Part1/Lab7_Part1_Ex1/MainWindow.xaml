@@ -24,11 +24,12 @@
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="2*"/>
-                        <RowDefinition Height="8*"/>
+                        <RowDefinition Height="7*"/>
+                        <RowDefinition Height="2*"/>
                     </Grid.RowDefinitions>
-                    <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex2Button" Grid.Column="1" Margin="308.967,24,343,24"/>
+                    <Button Grid.Row="0" Content="Get Data" Width="100" Height="30" Name="Ex2Button" Grid.Column="1" Margin="308.967,24,343,24" Click="Ex2Button_Click"/>
                     <ListBox Grid.Row="1" Name="Ex2lbDisplay"/>
-                    <TextBlock Name="Ex2TblkCount" Grid.ColumnSpan="2" Grid.Row="1"/>
+                    <TextBlock Name="Ex2TblkCount" Grid.ColumnSpan="2" Grid.Row="2"/>
                 </Grid>
             </TabItem>
         </TabControl>
