@@ -77,7 +77,17 @@ namespace Lab7_Part1_Ex1
 
         private void Ex4Button_Click(object sender, RoutedEventArgs e)
         {
+            //Query the db for all customers
+            var query = from customer in db.Customers
+                where customer.Orders.Count >= 20
+                select new
+                {
+                    Name = customer.CompanyName,
+                    OrderCount = customer.Orders.Count
+                };
 
+            //Set the result set as the data source for the datagrid
+            Ex4lbDisplay.ItemsSource = query.ToList();
         }
     }
 }
