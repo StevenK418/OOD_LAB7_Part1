@@ -89,5 +89,50 @@ namespace Lab7_Part1_Ex1
             //Set the result set as the data source for the datagrid
             Ex4lbDisplay.ItemsSource = query.ToList();
         }
+
+        private void Ex5Button_Click(object sender, RoutedEventArgs e)
+        {
+            //Query db for customers and return a new object with company, city, region and ordercount
+            var query = from customer in db.Customers
+                where customer.Orders.Count < 3
+                select new
+                {
+                    Company = customer.CompanyName,
+                    City = customer.City,
+                    Region = customer.Region,
+                    OrderCount = customer.Orders.Count
+                };
+
+            //Set result set as data source for the the ex 5 data grid
+            Ex5lbDisplay.ItemsSource = query.ToList();
+        }
+
+        private void Ex6Button_Click(object sender, RoutedEventArgs e)
+        {
+            //Query the database for company names
+            var query = from customer in db.Customers
+                orderby customer.CompanyName
+                select customer.CompanyName;
+
+            //Assign the resultset as data source for the listbox
+            Ex6lbDisplay.ItemsSource = query.ToList();
+        }
+
+        private void Ex6lbDisplay_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //Geta  reference to the selected item in the listbox
+            string company = (string) Ex6lbDisplay.SelectedItem;
+            //If the selected Item exists
+            if (company != null)
+            {
+                //Query the db for the total order cost for selected company
+                var query = (from detail in db.Order_Details
+                    where detail.Order.Customer.CompanyName == company
+                    select detail.UnitPrice * detail.Quantity).Sum();
+
+                //Assign the result as a formatted string to the textblock
+                Ex6TblkDetails.Text = string.Format("Total for supplier {0}\n\n{1:c}", company, query);
+            }
+        }
     }
 }

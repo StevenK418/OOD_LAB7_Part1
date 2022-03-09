@@ -52,6 +52,31 @@
                     <DataGrid Grid.Row="1" Name="Ex4lbDisplay"/>
                 </Grid>
             </TabItem>
+            <TabItem Header="Ex5" Width="75">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="8*"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0" Content="Get Data" Name="Ex5Button" Margin="326,20,356,24" Click="Ex5Button_Click"/>
+                    <DataGrid Grid.Row="1" Name="Ex5lbDisplay"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Ex6" Width="75">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="8*"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0"  Content="Get Data" Name="Ex6Button" Click="Ex6Button_Click"/>
+                    <ListBox Margin="10"  Grid.Row="1" Name="Ex6lbDisplay" SelectionChanged="Ex6lbDisplay_SelectionChanged"/>
+                    <TextBlock Name="Ex6TblkDetails" Margin="10" Grid.Column="1"  Grid.Row="1"/>
+                </Grid>
+            </TabItem>
         </TabControl>
     </Grid>
 </Window>
